@@ -31,8 +31,7 @@ class Program
 
         foreach (string mkvFile in mkvFiles)
         {
-            // Build the FFmpeg command to extract the subtitles track
-            // ffmpeg -i Movie.mkv -map 0:s:0 subs.srt
+            // Build the FFmpeg command to extract the subtitles track            
             string ffmpegCommand = $"-i {mkvFile} -map 0:s:0 {inputDirectory}\\{mkvFile.Substring(28, 14)}.srt";
 
             // Run the FFmpeg command
